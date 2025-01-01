@@ -120,6 +120,12 @@ module JekyllGFMAdmonitions
       page.output.gsub!(%r{<head>(.*?)</head>}m) do |match|
         "#{match[0..-7]}<style>#{CSSminify.compress(css)}</style>#{match[-7..]}"
       end
+
+      # If no <head> tag is found, insert the CSS at the start of the output
+      if !page.output.match(%r{<head>(.*?)</head>}m)
+        Jekyll.logger.debug 'GFMA:', "No <head> tag found in '#{page.path}', inserting CSS at the beginning of the page."
+        page.output = "<head><style>#{CSSminify.compress(css)}</style></head>" + page.output
+      end
     end
   end
 end

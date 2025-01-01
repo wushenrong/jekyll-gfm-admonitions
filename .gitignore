@@ -1,4 +1,5 @@
 .idea/
+.ruby-version
 *.gem
 _site/
 Gemfile.lock
