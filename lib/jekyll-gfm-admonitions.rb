@@ -76,7 +76,7 @@ module JekyllGFMAdmonitions
       code_blocks = []
       # Temporarily replace code blocks by a tag, so that we don't process any admonitions
       # inside of code blocks.
-      doc.content.gsub!(/(?:^|\n)(?<!>)\s*```.*?```/m) do |match|
+      doc.content = doc.content.gsub(/(?:^|\n)(?<!>)\s*```.*?```/m) do |match|
         code_blocks << match
         "```{{CODE_BLOCK_#{code_blocks.length - 1}}}```"
       end
@@ -84,7 +84,7 @@ module JekyllGFMAdmonitions
       convert_admonitions(doc)
 
       # Put the code blocks back in place
-      doc.content.gsub!(/```\{\{CODE_BLOCK_(\d+)}}```/) do
+      doc.content = doc.content.gsub(/```\{\{CODE_BLOCK_(\d+)}}```/) do
         code_blocks[::Regexp.last_match(1).to_i]
       end
     end
