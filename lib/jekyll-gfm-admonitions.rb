@@ -90,10 +90,14 @@ module JekyllGFMAdmonitions
     end
 
     def convert_admonitions(doc)
-      doc.content.gsub!(/>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\]\s*\n((?:>.*\n?)*)/) do
+      doc.content.gsub!(/>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\]\s*(.*)\s*\n((?:>.*\n?)*)/) do
         type = ::Regexp.last_match(1).downcase
-        title = type.capitalize
-        text = ::Regexp.last_match(2).gsub(/^>\s*/, '').strip
+        if ::Regexp.last_match(2).length > 0
+          title = ::Regexp.last_match(2)
+        else
+          title = type.capitalize
+        end
+        text = ::Regexp.last_match(3).gsub(/^>\s*/, '').strip
         icon = Octicons::Octicon.new(ADMONITION_ICONS[type]).to_svg
         Jekyll.logger.debug 'GFMA:', "Converting #{type} admonition."
 

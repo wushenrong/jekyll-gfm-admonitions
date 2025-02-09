@@ -7,9 +7,14 @@ layout: home
 
 # GitHub Flavored Admonitions
 
+Use GitHub Flavored Admonitions on your GitHub Pages or Jekyll site. Admonition titles are supported.
 
 > [!NOTE]
 > I am a **note** admonition, useful to let interested users take note of something.
+
+
+> [!TIP] Titles are supported
+> You can add custom titles to your admonitions.
 
 
 > [!TIP]

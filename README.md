@@ -4,6 +4,13 @@ A Jekyll plugin to render GitHub-flavored admonitions in your Jekyll sites.
 This plugin allows you to use GitHub-flavored markdown syntax to create stylish admonition
 blocks for notes, warnings, tips, cautions, and important messages.
 
+## Features
+
+* Admonitions
+* Admonition titles
+* Jekyll support
+* GitHub Pages support
+
 ## Supported Admonitions
 
 The following admonitions are supported:
@@ -52,6 +59,18 @@ To use admonitions in your markdown files, simply add the following syntax:
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+
+#### Custom titles
+
+Custom admonition titles are supported:
+
+> [!TIP] My own title
+> Fancy!
+
+> [!NOTE]
+> GFM itself does not support this syntax, so this will only wokr in your
+> build output, but not on your GitHub rendered READMEs etc.
+
 
 ## Installation
 
