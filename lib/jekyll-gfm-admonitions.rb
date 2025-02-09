@@ -118,7 +118,8 @@ module JekyllGFMAdmonitions
       css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
 
       page.output.gsub!(%r{<head>(.*?)</head>}m) do |match|
-        "#{match[0..-7]}<style>#{CSSminify.compress(css)}</style>#{match[-7..]}"
+        head = Regexp.last_match(1)
+        "<head>#{head}<style>#{CSSminify.compress(css)}</style></head>"
       end
 
       # If no <head> tag is found, insert the CSS at the start of the output
