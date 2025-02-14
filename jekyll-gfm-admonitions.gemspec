@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'jekyll-gfm-admonitions'
-  spec.version       = '1.1.0'
+  spec.version       = '1.1.1'
   spec.authors       = ['Robin De Schepper']
   spec.email         = ['robin.deschepper93@gmail.com']
 
@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.7.0'
   spec.add_dependency 'cssminify', '~> 1.0'
   spec.add_dependency 'jekyll', '>= 3.0', '< 5.0'
-  spec.add_dependency 'octicons', '~> 19.11'
+  spec.add_dependency 'octicons', '~> 19.8'
   spec.add_development_dependency 'bundler', '~> 2.0'
 end
