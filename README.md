@@ -29,8 +29,9 @@ The following admonitions are supported:
 To use admonitions in your markdown files, simply add the following syntax:
 
 ```markdown
-> [!NOTE]  
+> [!NOTE]
 > Highlights information that users should take into account, even when skimming.
+> And supports multi-line text.
 
 > [!TIP]
 > Optional information to help a user be more successful.
@@ -38,15 +39,18 @@ To use admonitions in your markdown files, simply add the following syntax:
 > [!IMPORTANT]  
 > Crucial information necessary for users to succeed.
 
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+  > [!WARNING]  
+  > Critical content demanding immediate
+  > user attention due to potential risks.
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+> Opportunity to provide more context.
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > Highlights information that users should take into account, even when skimming.
+> And supports multi-line text.
 
 > [!TIP]
 > Optional information to help a user be more successful.
@@ -54,11 +58,13 @@ To use admonitions in your markdown files, simply add the following syntax:
 > [!IMPORTANT]  
 > Crucial information necessary for users to succeed.
 
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+  > [!WARNING]  
+  > Critical content demanding immediate
+  > user attention due to potential risks.
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+> Opportunity to provide more context.
 
 #### Custom titles
 
@@ -179,4 +185,6 @@ for details.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+
+> [!TIP]
+> Contributions are welcome! Please feel free to submit issues or pull requests.
