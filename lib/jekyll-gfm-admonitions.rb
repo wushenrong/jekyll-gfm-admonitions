@@ -50,7 +50,7 @@ module JekyllGFMAdmonitions
     def process_posts(site)
       site.posts.docs.each do |doc|
         Jekyll.logger.debug 'GFMA:', "Processing post '#{doc.path}' (#{doc.content.length} characters)."
-        process_doc(doc)
+        process_doc_content(doc)
       end
     end
 
